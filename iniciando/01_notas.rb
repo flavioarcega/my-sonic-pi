@@ -18,21 +18,8 @@ define :corpo do
   sleep 1
 end
 
+# Loop principal
 live_loop :main do
   use_synth :beep
-  corpo
-end
-
-live_loop :efeito1 do
-  sleep 7.5
-  3.times do
-    use_synth :pretty_bell
-    corpo
-  end
-end
-
-live_loop :efeito2 do
-  sleep 2*7.5
-  use_synth :saw
   corpo
 end
