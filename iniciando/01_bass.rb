@@ -20,6 +20,22 @@ define :base do
   sleep 0.75
 end
 
+# Inicio de tudo
+7.times do
+  3.times do
+    sample :drum_snare_soft
+    sleep 0.1
+  end
+  sleep 0.1
+end
+sample :drum_snare_soft
+sample :drum_cymbal_open, amp: 0.3
+sleep 0.15
+sample :drum_snare_soft
+sample :drum_cymbal_open, amp: 0.3
+sleep 0.5
+
+# loop principal
 live_loop :main do
   base
 end
