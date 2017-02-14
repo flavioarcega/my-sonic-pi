@@ -1,5 +1,6 @@
 # script para facilitar obter a nota de algum sintetizador
 
+# Matriz com notas audiveis
 define :matriz do |tempo=0.1|
   play_pattern_timed [:C2, :D2, :E2, :F2, :G2, :A2, :B2], [tempo]
   play_pattern_timed [:C3, :D3, :E3, :F3, :G3, :A3, :B3], [tempo]
@@ -248,7 +249,9 @@ define :zawa do
   matriz(0.3)
 end
 
-live_loop :main do
+#######################################################
+# chamar aqui a funcao correspondente ao sintetizador #
+#######################################################
+in_thread do
   piano
 end
-
