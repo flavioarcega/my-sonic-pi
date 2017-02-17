@@ -1,11 +1,10 @@
-# Laser Eletronic 1
+# Laser Eletronic
 
 use_debug false
 
 define :laser do
   synth :prophet, note: 50, attack: 0, release: 3.8
 end
-
 
 ocean_amp = 0.2 #rrand(0.1, 0.3)
 with_fx :reverb, mix: 0.5 do
